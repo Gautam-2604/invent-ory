@@ -7,6 +7,7 @@ import morgan from "morgan";
 
 import dashboardRoutes from '../src/routes/dashboardRoutes'
 import productRoutes from "./routes/productRoutes";
+import userRoute from "./routes/userRoute";
 
 
 
@@ -24,6 +25,7 @@ app.use(cors());
 
 app.use('/dashboard', dashboardRoutes)
 app.use('/products', productRoutes)
+app.use('/user', userRoute)
 
 const port= process.env.PORT || 3002
 app.listen(port,()=>{
