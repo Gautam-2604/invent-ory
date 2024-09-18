@@ -9,6 +9,7 @@ export const getProducts = async(req: Request, res: Response): Promise<void>=>{
         const products = prisma.products.findMany({
             where:{
                 name:{
+                    
                     contains: search
                 }
             }
